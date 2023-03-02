@@ -8,7 +8,7 @@ if (isset($_POST['uid'])) {
     $query = mysqli_query($dbconnect, "SELECT * FROM tb_user WHERE id='$id'");
     $cek = mysqli_num_rows($query);
     if ($cek >0) {
-        $data = mysqli_fetch_assoc($query);
+        $data = mysqli_fetch_assoc($query); //mengambil data
         $hasil_saldo = $data['saldo'] - $harga_barang;
         if ($hasil_saldo >= 0) {
             mysqli_query($dbconnect, "UPDATE tb_user SET saldo ='$hasil_saldo' WHERE id='$id'");
