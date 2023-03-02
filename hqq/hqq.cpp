@@ -48,7 +48,7 @@ void loop() {
     Serial.println();
     Serial.print(" UID tag :");    // print UID tag :
     content = "";                  // print UID tagnya
-    byte letter;
+    byte letter;                   //menyimpan data byte yang dibaca rfid
  
     for (byte i = 0; i < mfrc522.uid.size; i++) //increment dari 0 hingga ukuran UID dikurangi satu (mfrc522.uid.size - 1). Pada setiap iterasi, nilai dari i akan digunakan untuk mengakses setiap byte dari UID melalui mfrc522.uid.uidByte[i].
     {
