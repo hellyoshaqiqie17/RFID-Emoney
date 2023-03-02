@@ -94,7 +94,7 @@ void parseJson() {
     char json[500]; //adalah deklarasi variabel bertipe karakter yang digunakan untuk menyimpan JSON response yang diterima dari server dengan ukuran 500 char
     response.toCharArray(json, 500);
     StaticJsonDocument<200>doc; // menampung dokumen JSON dengan ukuran maksimum 200 bytes.
-    deserializeJson(doc, json); //mengurai string JSON json dan memasukkan nilainya ke dalam objek doc yang sudah dideklarasikan sebelumnya sebagai StaticJsonDocument
+    deserializeJson(doc, json); //mengurai string JSON dan memasukkan nilainya ke dalam objek doc yang sudah dideklarasikan sebelumnya sebagai StaticJsonDocument
  
     const char* status = doc["Detail"]["Status"]; // mengambil value status dari objek JSON
     const char* nama = doc["Detail"]["Data User"]["nama"]; //mengambil value nama dari objek JSON
