@@ -7,7 +7,7 @@ if (isset($_POST['uid'])) { //mengecek apakah terdapat request yang dikirim kont
     $id = $_POST['uid']; //membuat variabel id
     $query = mysqli_query($dbconnect, "SELECT * FROM tb_user WHERE id='$id'"); // uid dengan variabel id di database
     $cek = mysqli_num_rows($query);
-    if ($cek >0) {
+    if ($cek >0) { //kondisi terdapatnya uid 
         $data = mysqli_fetch_assoc($query); //mengambil data
         $hasil_saldo = $data['saldo'] - $harga_barang;
         if ($hasil_saldo >= 0) {
