@@ -2,9 +2,9 @@
  
 $harga_barang = 11400; //harga transaksi
  
-if (isset($_POST['uid'])) {
-    include 'connection.php';
-    $id = $_POST['uid'];
+if (isset($_POST['uid'])) { //mengecek apakah terdapat request yang dikirim kontroller,
+    include 'connection.php'; 
+    $id = $_POST['uid']; 
     $query = mysqli_query($dbconnect, "SELECT * FROM tb_user WHERE id='$id'");
     $cek = mysqli_num_rows($query);
     if ($cek >0) {
