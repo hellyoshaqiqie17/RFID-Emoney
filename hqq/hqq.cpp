@@ -69,7 +69,7 @@ void loop() {
 
     Serial.println();
 
-    parseJson(); //parsing/mengurai format data JSON   
+    parseJson(); //parsing/mengurai format data JSONN   
   } else {
     Serial.println("error koneksi wifi"); //jika tidakbisa maka dikarenakan koneksi wifi
   }
@@ -116,7 +116,7 @@ void parseJson() {
     Serial.println("==================================================");
       
   } else {
-    Serial.print("Error mengirimkan POST: ");
+    Serial.print("Error mengirimkan POST: "); 
     Serial.println(httpResponseCode);
   }
   delay(2000);
